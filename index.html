@@ -1,194 +1,209 @@
-<!--Adding DOCTYPE element disturbs the layout and functionality-->
+<!DOCTYPE html>
 <html>
-<head>
-    <title>
-        Case Study
-    </title>
-    <style>
-        /* When to use #(id?) and when to use .(classes?) */
-        :root {
+    <head>
+        <title>
+            MyHealthMyResposibility
+        </title>
+        <style>
+            :root {
             --primary-color: #A8D0E6;
             --secondary-color: #FFFFFF;
             --accent-primary-color: #24305E;
             --accent-secondary-color: #F76C6C;
             --accent-text-color: var(--secondary-color);
-        }
-        body{
-            margin: 0;
-            overflow: hidden;
-            font-size: large;
-        }
-        #sideNavBar{
-            background-color: var(--accent-primary-color);
-            width: 60px;
-            height: 100%;
-            padding-top: 10px;
-            float: left;
-            margin: 0;
-            overflow: auto;
-            scrollbar-width: none;
-        }
-        #sideNavBar::-webkit-scrollbar{
-            display: none;
-        }
-        #sideNavBarExpanded{
-            background-color: var(--accent-secondary-color);
-            width: 0;
-            height: 100%;
-            padding-top: 10px;
-            float: left;
-            overflow: auto;
-            scrollbar-width: none;
-        }
-        #sideNavBarExpanded::-webkit-scrollbar{
-            display: none;
-        }
-        #contentContainer{
-            background-color: var(--primary-color);
-            width:auto;
-            height: 100%;
-            margin: 0;
-            overflow: auto;
-        }
-        #contentBackground{
-            background-image: url("img/LandingPageMainImage.jpg");
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 500px;
-            position: relative;
-        }
-        #header{
-            width: 100%;
-            font-size: 60px;
-            font-weight: bold;
-            text-align: right;
-            color: var(--secondary-color);
-            position: absolute;
-            bottom: 10px;
-            right: 20px;
-        }
-        #content{
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 20px;
-        }
-        .sideNavButton{
-            width: 100%;
-            height: 12%;
-            min-height: 60px;
-            background-color: var(--accent-primary-color);
-            font-size: x-large;
-            text-align: center;
-            color: var(--accent-text-color);
-            border: 0;
-        }
-        .sideNavTab{
-            width: 100%;
-            height: 12%;
-            min-height: 60px;
-            background-color: var(--accent-secondary-color);
-            font-size: large;
-            text-align: center;
-            color: var(--accent-text-color);
-            border: 0;
-        }
-        
-    </style>
-</head>
+            }
+            html,body{
+                width: 100%;
+                height: 100%;
 
-<body>
-    <div id="pageContainer">
-        <div id="sideNavBar">
-            <!--Letters to be replaced by icons-->
-            <button id="expandButton" class="sideNavButton" style="font-size: xx-large;" onclick="expandSideNav()">
-                <!-- &rarr; -->
-                &#8801;
-            </button>
-            <button class="sideNavButton">
-                H
-            </button>
-            <button class="sideNavButton">
-                W
-            </button>
-            <button class="sideNavButton">
-                F
-            </button>
-            <button class="sideNavButton">
-                A
-            </button>
-            <button class="sideNavButton">
-                P
-            </button>
-            <button class="sideNavButton">
-                A
-            </button>
-            <button class="sideNavButton">
-                A
-            </button>
-            
-            <script>
-                function expandSideNav(){
-                    // What is the difference between offsetWidth and style.width
-                    if(document.getElementById("sideNavBarExpanded").offsetWidth == "0"){
-                        document.getElementById("sideNavBarExpanded").style.width = "15%";
-                        document.getElementById("expandButton").style.backgroundColor = "var(--accent-secondary-color)";
-                    }else{
-                        document.getElementById("sideNavBarExpanded").style.width = "0";
-                        document.getElementById("expandButton").style.backgroundColor = "var(--accent-primary-color)";
-                    }
+                margin: 0;
+
+                overflow: hidden;
+            }
+            #outerContainer{
+                width: 100%;
+                height: 100%;
+            }
+            #sideNavBar{
+                width: 5%;
+                height: 100%;
+
+                padding-top: 5px;
+
+                background-color: var(--accent-primary-color);
+
+                float: left;
+
+                overflow: auto;
+            }
+            #sideNavBar::-webkit-scrollbar{
+                display: none;
+            }
+            .sideNavButton{
+                width: 100%;
+                height: 12%;
+                min-width: 60px;
+                min-height: 60px;
+
+                background-color: var(--accent-primary-color);
+                border: 0;
+
+                font-size: x-large;
+                color: var(--accent-text-color);
+            }
+            #sideNavExpandedView{
+                width: 0;
+                height: 100%;
+
+                padding-top: 5px;
+
+                background-color: var(--accent-secondary-color);
+
+                float: left;
+
+                overflow: auto;
+            }
+            #sideNavExpandedView::-webkit-scrollbar{
+                display: none;
+            }            
+            .sideNavTab{
+                width: 100%;
+                height: 12%;
+                min-height: 60px;
+
+                background-color: var(--accent-secondary-color);
+                border: 0;
+
+                font-size: x-large;
+                color: var(--accent-text-color);
+            }
+            #contentContainer{                
+                width:auto;
+                height: 100%;
+
+                margin: 0;
+
+                background-color: var(--primary-color);
+                
+                overflow: auto;
+            }
+            #headerContent{
+                width: 100%;
+                height: 500px;
+
+                background-image: url(img/LandingPageMainImage.jpg);
+                background-size: cover;
+                background-position: center;
+
+                position: relative;
+            }
+            #header{
+                width: 100%;
+
+                font-size: 60px;
+                font-weight: bold;
+                text-align: right;
+                color: var(--accent-text-color);
+
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+            }
+            #bodyContent{
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 20px;
+            }
+        </style>
+        <script>
+            function toggleSideNav(){
+                if(document.getElementById("sideNavExpandedView").offsetWidth == "0"){
+                    document.getElementById("sideNavExpandedView").style.width = "15%";
+                    document.getElementById("expandButton").style.backgroundColor = "var(--accent-secondary-color)"
+                }else{
+                    document.getElementById("sideNavExpandedView").style.width = "0";
+                    document.getElementById("expandButton").style.backgroundColor = "var(--accent-primary-color)"
                 }
-            </script>
-        </div>
-        <div id="sideNavBarExpanded">
-            <button style="text-align: right;padding-right: 20px;font-size: x-large;" class="sideNavTab" onclick="expandSideNav()">
-                X
-            </button>
-            <button class="sideNavTab">
-                Home
-            </button>
-            <button class="sideNavTab">
-                Why
-            </button>
-            <button class="sideNavTab">
-                Facts
-            </button>
-            <button class="sideNavTab">
-                Assess
-            </button>
-            <button class="sideNavTab">
-                Plans
-            </button>
-            <button class="sideNavTab">
-                Actions
-            </button>
-            <button class="sideNavTab">
-                About
-            </button>
-        </div>
-        <div id="contentContainer">
-            <div id="contentBackground">
-                <!--Need to align text to bottom left-->
-                <div id="header">MyHealthMyResposibility</div>
+            }
+        </script>
+    </head>
+    <body>
+        <div id="outerContainer">
+            <div id="sideNavBar">
+                <!--Letters to be replaced by icons-->
+                <button id="expandButton" class="sideNavButton" style="font-size: xx-large;" onclick="toggleSideNav()">
+                    <!-- &rarr; -->
+                    &#8801;
+                </button>
+                <button class="sideNavButton">
+                    H
+                </button>
+                <button class="sideNavButton">
+                    W
+                </button>
+                <button class="sideNavButton">
+                    F
+                </button>
+                <button class="sideNavButton">
+                    A
+                </button>
+                <button class="sideNavButton">
+                    P
+                </button>
+                <button class="sideNavButton">
+                    A
+                </button>
+                <button class="sideNavButton">
+                    A
+                </button>                
             </div>
-            <div id="content">
-                <p style="text-align: justify;">
-No one disputes the fact that ‘Health is wealth’, and once health is impaired, no wealth can be of any use. It is not very motivating to study, follow nutritious plan and consume food that is complete in all nutrients, as often we are confused by what we come across in different forums, differing opinions on what is good and what is bad. Herewith in this place, an attempt is made to consolidate information on Nutrition, received through different sources and verify the evidence as much as possible and publish here, in a way easily tounderstand and follow. 
-<br>
-<b>Target Audience:</b><br> While the initial objective is to make this website as part of academic project, but the information is consolidated in such away to provide all the useful information to  
--	Millennials in understanding the concepts of Nutrition bring awareness, make them conscious of what they eat. 
--	Individuals, who have a specific objective of weight loss, weight gain, and but not sure where to start. <br>
-No one disputes the fact that ‘Health is wealth’, and once health is impaired, no wealth can be of any use. It is not very motivating to study, follow nutritious plan and consume food that is complete in all nutrients, as often we are confused by what we come across in different forums, differing opinions on what is good and what is bad. Herewith in this place, an attempt is made to consolidate information on Nutrition, received through different sources and verify the evidence as much as possible and publish here, in a way easily tounderstand and follow. 
-<br>
-<b>Target Audience:</b><br> While the initial objective is to make this website as part of academic project, but the information is consolidated in such away to provide all the useful information to  
--	Millennials in understanding the concepts of Nutrition bring awareness, make them conscious of what they eat. 
--	Individuals, who have a specific objective of weight loss, weight gain, and but not sure where to start. 
-
-                </p>
+            <div id="sideNavExpandedView">
+                <button style="text-align: right;padding-right: 20px;font-size: x-large;" class="sideNavTab" onclick="toggleSideNav()">
+                    X
+                </button>
+                <button class="sideNavTab">
+                    Home
+                </button>
+                <button class="sideNavTab">
+                    Why
+                </button>
+                <button class="sideNavTab">
+                    Facts
+                </button>
+                <button class="sideNavTab">
+                    Assess
+                </button>
+                <button class="sideNavTab">
+                    Plans
+                </button>
+                <button class="sideNavTab">
+                    Actions
+                </button>
+                <button class="sideNavTab">
+                    About
+                </button>
             </div>
-
+            <div id="contentContainer">
+                <div id="headerContent">
+                    <span id="header">MyHealthMyResposibility</span>
+                </div>
+                <div id="bodyContent">
+                    <p style="text-align: justify;">
+                        No one disputes the fact that ‘Health is wealth’, and once health is impaired, no wealth can be of any use. It is not very motivating to study, follow nutritious plan and consume food that is complete in all nutrients, as often we are confused by what we come across in different forums, differing opinions on what is good and what is bad. Herewith in this place, an attempt is made to consolidate information on Nutrition, received through different sources and verify the evidence as much as possible and publish here, in a way easily tounderstand and follow. 
+                        <br>
+                        <b>Target Audience:</b><br> While the initial objective is to make this website as part of academic project, but the information is consolidated in such away to provide all the useful information to  
+                        -	Millennials in understanding the concepts of Nutrition bring awareness, make them conscious of what they eat. 
+                        -	Individuals, who have a specific objective of weight loss, weight gain, and but not sure where to start. <br>
+                        No one disputes the fact that ‘Health is wealth’, and once health is impaired, no wealth can be of any use. It is not very motivating to study, follow nutritious plan and consume food that is complete in all nutrients, as often we are confused by what we come across in different forums, differing opinions on what is good and what is bad. Herewith in this place, an attempt is made to consolidate information on Nutrition, received through different sources and verify the evidence as much as possible and publish here, in a way easily tounderstand and follow. 
+                        <br>
+                        <b>Target Audience:</b><br> While the initial objective is to make this website as part of academic project, but the information is consolidated in such away to provide all the useful information to  
+                        -	Millennials in understanding the concepts of Nutrition bring awareness, make them conscious of what they eat. 
+                        -	Individuals, who have a specific objective of weight loss, weight gain, and but not sure where to start. 
+                        
+                    </p>
+                </div>
+            </div>
+            
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
