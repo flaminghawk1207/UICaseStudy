@@ -1,0 +1,292 @@
+<html>
+<head>
+    <title>
+        Case Study
+    </title>
+    <style>
+        /* When to use #(id?) and when to use .(classes?) */
+        :root {
+            --primary-color: #A8D0E6;
+            --secondary-color: #FFFFFF;
+            --accent-primary-color: #24305E;
+            --accent-secondary-color: #F76C6C;
+            --accent-text-color: var(--secondary-color);
+        }
+        body{
+            margin: 0;
+            overflow: hidden;
+            font-size: large;
+        }
+        #sideNavBar{
+            background-color: var(--accent-primary-color);
+            width: 60px;
+            height: 100%;
+            padding-top: 10px;
+            float: left;
+            margin: 0;
+            overflow: auto;
+            scrollbar-width: none;
+        }
+        #sideNavBar::-webkit-scrollbar{
+            display: none;
+        }
+        #sideNavBarExpanded{
+            background-color: var(--accent-secondary-color);
+            width: 0;
+            height: 100%;
+            padding-top: 10px;
+            float: left;
+            overflow: auto;
+            scrollbar-width: none;
+        }
+        #sideNavBarExpanded::-webkit-scrollbar{
+            display: none;
+        }
+        #contentContainer{
+            background-color: var(--primary-color);
+            width:auto;
+            height: 100%;
+            margin: 0;
+            overflow: auto;
+        }
+        #contentBackground{
+            background-image: url("img/selfa.png");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+        #header{
+            width: 100%;
+            font-size: 60px;
+            font-weight: bold;
+            text-align: right;
+            color: var(--secondary-color);
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+        }
+        #content{
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        .sideNavButton{
+            width: 100%;
+            height: 12%;
+            min-height: 60px;
+            background-color: var(--accent-primary-color);
+            font-size: x-large;
+            text-align: center;
+            color: var(--accent-text-color);
+            border: 0;
+        }
+        .sideNavTab{
+            width: 100%;
+            height: 12%;
+            min-height: 60px;
+            background-color: var(--accent-secondary-color);
+            font-size: large;
+            text-align: center;
+            color: var(--accent-text-color);
+            border: 0;
+        }
+        .header1{
+        position:relative;
+        font-size: 50px;
+        top:20px;
+    }
+        .header2{
+        position:relative;
+        font-size: 50px;
+        top:10px;
+    }
+    .border1{
+      width:400px;
+    height:75px;
+      top:300px;
+      display:inline-block;
+      position:absolute;
+      left:10px;
+    }
+        
+    </style>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <div id="sideNavBar">
+            <!--Letters to be replaced by icons-->
+            <button id="expandButton" class="sideNavButton" style="font-size: xx-large;" onclick="expandSideNav()">
+                <!-- &rarr; -->
+                &#8801;
+            </button>
+            <button class="sideNavButton">
+                H
+            </button>
+            <button class="sideNavButton">
+                W
+            </button>
+            <button class="sideNavButton">
+                F
+            </button>
+            <button class="sideNavButton">
+                A
+            </button>
+            <button class="sideNavButton">
+                P
+            </button>
+            <button class="sideNavButton">
+                A
+            </button>
+            <button class="sideNavButton">
+                A
+            </button>
+            
+            <script>
+                function expandSideNav(){
+                    // What is the difference between offsetWidth and style.width
+                    if(document.getElementById("sideNavBarExpanded").offsetWidth == "0"){
+                        document.getElementById("sideNavBarExpanded").style.width = "15%";
+                        document.getElementById("expandButton").style.backgroundColor = "var(--accent-secondary-color)";
+                    }else{
+                        document.getElementById("sideNavBarExpanded").style.width = "0";
+                        document.getElementById("expandButton").style.backgroundColor = "var(--accent-primary-color)";
+                    }
+                }
+            </script>
+        </div>
+        <div id="sideNavBarExpanded">
+            <button style="text-align: right;padding-right: 20px;font-size: x-large;" class="sideNavTab" onclick="expandSideNav()">
+                X
+            </button>
+            <button class="sideNavTab">
+                Home
+            </button>
+            <button class="sideNavTab">
+                Why
+            </button>
+            <button class="sideNavTab">
+                Facts
+            </button>
+            <button class="sideNavTab">
+                Assess
+            </button>
+            <button class="sideNavTab">
+                Plans
+            </button>
+            <button class="sideNavTab">
+                Actions
+            </button>
+            <button class="sideNavTab">
+                About
+            </button>
+        </div>
+        <div id="contentContainer">
+            <div id="contentBackground">
+                <!--Need to align text to bottom left-->
+                <div id="header" style="color: var(--secondary-color);">Self Assessment</div>
+            </div>
+            <div id="content">
+                <div>
+                <h2 class="header1"  class="border1" style="background-color: var(--secondary-color);">Body Mass Index</h2>
+                <H3  style="background-color: var(--accent-secondary-color);">What is BMI?</H3>
+                <p>
+                    Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from mass in kilograms and height in metres.
+        <br>
+        The BMI may be determined using a table or chart which displays BMI as a function of mass and height using contour lines or colours for different BMI categories, and which may use other units of measurement (converted to metric units for the calculation).
+                <br>
+        The BMI is a convenient rule of thumb used to broadly categorize a person as underweight, normal weight, overweight, or obese based on tissue mass (muscle, fat, and bone) and height. Commonly accepted BMI ranges are underweight (under 18.5 kg/m2), normal weight (18.5 to 25), overweight (25 to 30), and obese (over 30).
+        <br>
+        BMIs under 20 and over 25 have been associated with higher all-causes mortality, with the risk increasing with distance from the 20–25 range.
+                </p>
+                <H3  style="background-color:var(--accent-secondary-color);">BMI Calculator </H3>
+                <form>
+                    <div style="background-color:#a9f1df;width:200px;height:130px;">
+                        <div style="position: relative;left:15px;top:5px;">
+                            <label for="height">Height (cm)</label><BR>
+                                <INPUT TYPE="number" ID="height" name="height"><br>
+                                <label for="weight">Weight (kg)</label><BR>
+                                <INPUT TYPE="number" ID="weight" name="weight"><br> 
+                                <div style="position:relative;top:10px;">
+                                    <input type="submit" value="submit"><br>
+                                </div>
+                        </div>
+                    </div>
+                </form>
+                <P> Click <A href="https://www.calkoo.com/en/body-mass-index-calculator" target="_blank">here</A> to calculate your body mass index.</P>
+                <H3  style="background-color:var(--accent-secondary-color);">BMI Chart</H3>
+                <center>
+                    <img src="img/bmi-chart.png" alt="BMI CHART" width="700" height="612">
+                </center>
+                </div>  
+                <div>
+                    <h2 class="header2" class="border1" style="background-color:var(--secondary-color);">Calorie Intake</h2>
+                    <h3 style="background-color:var(--accent-secondary-color);">What is Calories?</h3>
+                    <p>
+                        Calories are a measure of how much energy food or drink contains. The amount of energy you need will depend on:
+                        <ul>
+                            <li>
+                                your age – for example, growing children and teenagers may need more energy
+                            </li>
+                            <li>
+                                your lifestyle – for example, how active you are
+                            </li>
+                            <li>
+                                your size – your height and weight can affect how quickly you use energy
+                            </li>
+                        </ul>
+                        Other factors can also affect how much energy you burn. For example:
+                        <ul>
+                            <li>
+                                some hormones (chemicals produced by the body) – such as thyroid hormones
+                            </li>
+                            <li>
+                                some medicines – such as glucocorticoids, a type of steroid used to treat inflammation
+                            </li>
+                            <li>
+                                being unwell
+                            </li>
+                        </ul>
+                    </p>
+                    <h3 style="background-color:var(--accent-secondary-color);">Calories and kilocalories</h3>
+                        <p>The term calorie is commonly used as shorthand for kilocalorie. You will find this written as kcal on food packets.<br> Kilojoules (kJ) are the equivalent of kilocalories within the International System of Units, and you'll see both kJ and <br>kcal on nutrition labels. 4.2kJ is equivalent to approximately 1kcal.</p>
+                    <h3 style="background-color:var(--accent-secondary-color);">Calories Intake Calculator</h3>
+                    <div style="background-color:#a9f1df;width:210px;height:270px;">
+                        <froms>
+                            <div style="position: relative;left:20px;">
+                                <label for="age">Age :</label>
+                                <input type="number" id="age" name="age"><br>
+                            </div>
+                            <div style="position: relative;top: 10px;left:20px;">
+                                <input type="radio" id="male" name="gender">
+                                <label for="male">Male</label><br>
+                                <input type="radio" id="female" name="gender">
+                                <label for="female">Female </label><br>
+                                <input type="radio" id="Other" name="gender">
+                                <label for="female">Other </label><br>
+                            </div>
+                            <div style="position: relative;top: 20px;left:20px;">
+                                <label for="height">Height (cm)</label>
+                                <INPUT TYPE="number" ID="height" name="height"><br>
+                                <label for="weight">Weight (kg)</label>
+                                <INPUT TYPE="number" ID="weight" name="weight"><br>
+                            </div>
+                            <div style="position: relative;top: 30px; left:20px;">
+                                <input type="submit" value="submit"><br>
+                            </div>
+                        </froms>
+                    </div>
+                    <p>Click <a href="https://www.calculator.net/calorie-calculator.html" target="_blank">here </a>to calculate your calorie intake. </p>
+                <h3 style="background-color:var(--accent-secondary-color);">Calorie Intake Chart</h3>
+                <center>
+                    <img src="img/calorie.jpg" alt="calorieintake" width="700" height="674">
+                </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
