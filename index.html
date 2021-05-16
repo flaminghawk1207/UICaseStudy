@@ -41,7 +41,7 @@
             }
             .sideNavButton{
                 width: 100%;
-                height: 12%;
+                height: 11%;
                 min-width: 60px;
                 min-height: 60px;
 
@@ -71,7 +71,7 @@
             }            
             .sideNavTab{
                 width: 100%;
-                height: 12%;
+                height: 11%;
                 min-height: 60px;
 
                 background-color: var(--accent-secondary-color);
@@ -116,9 +116,46 @@
                 right: 20px;
             }
             #bodyContent{
-                padding-left: 20px;
-                padding-right: 20px;
-                font-size: 20px;
+                width: 100%;
+            }
+            .infoCard:nth-of-type(even){
+                background-color: var(--primary-color);
+            }
+            .infoCard:nth-of-type(odd){
+                background-color: var(--secondary-color);
+            }
+            .infoCard:nth-of-type(even) .infoCardImg{
+                order: 1;
+            }            
+            .infoCard:nth-of-type(odd) .infoCardImg{
+                order: 2;
+            }
+            .infoCard:nth-of-type(even) .infoCardContent{
+                order: 2;
+            }
+            .infoCard:nth-of-type(odd) .infoCardContent{
+                order: 1;
+            }
+            .infoCard{
+                width: 100%;
+                height: 500px;
+                
+                display: flex;
+            }
+            .infoCardContent{
+                flex: 40%;
+
+                margin: 10px;
+
+                border: 2px solid var(--accent-primary-color);
+                border-radius: 10px;
+
+                text-align: center;
+                font-size: xx-large;
+            }
+            .infoCardImg{
+                background-image: url(img/LandingPageMainImage.jpg);
+                flex: 60%;
             }
         </style>
         <script>
@@ -148,20 +185,23 @@
                     W
                 </button>
                 <button class="sideNavButton">
-                    F
+                    N
                 </button>
                 <button class="sideNavButton">
                     A
                 </button>
                 <button class="sideNavButton">
-                    P
+                    R
+                </button>
+                <button class="sideNavButton">
+                    T
                 </button>
                 <button class="sideNavButton">
                     A
                 </button>
                 <button class="sideNavButton">
-                    A
-                </button>                
+                    S
+                </button>
             </div>
             <div id="sideNavExpandedView">
                 <button style="text-align: right;padding-right: 20px;font-size: x-large;" class="sideNavTab" onclick="toggleSideNav()">
@@ -171,22 +211,25 @@
                     Home
                 </button>
                 <button class="sideNavTab">
-                    Why
+                    Why Awareness?
                 </button>
                 <button class="sideNavTab">
-                    Facts
+                    Nutrition Simplified
                 </button>
                 <button class="sideNavTab">
-                    Assess
+                    Self-Assessment
                 </button>
                 <button class="sideNavTab">
-                    Plans
+                    Recommended Action
                 </button>
                 <button class="sideNavTab">
-                    Actions
+                    Tools
                 </button>
                 <button class="sideNavTab">
                     About
+                </button>
+                <button class="sideNavTab">
+                    Sign-up/Sign-in
                 </button>
             </div>
             <div id="contentContainer">
@@ -194,19 +237,26 @@
                     <span id="header">MyHealthMyResposibility</span>
                 </div>
                 <div id="bodyContent">
-                    <p style="text-align: justify;">
-                        No one disputes the fact that ‘Health is wealth’, and once health is impaired, no wealth can be of any use. It is not very motivating to study, follow nutritious plan and consume food that is complete in all nutrients, as often we are confused by what we come across in different forums, differing opinions on what is good and what is bad. Herewith in this place, an attempt is made to consolidate information on Nutrition, received through different sources and verify the evidence as much as possible and publish here, in a way easily tounderstand and follow. 
-                        <br>
-                        <b>Target Audience:</b><br> While the initial objective is to make this website as part of academic project, but the information is consolidated in such away to provide all the useful information to  
-                        -	Millennials in understanding the concepts of Nutrition bring awareness, make them conscious of what they eat. 
-                        -	Individuals, who have a specific objective of weight loss, weight gain, and but not sure where to start. <br>
-                        No one disputes the fact that ‘Health is wealth’, and once health is impaired, no wealth can be of any use. It is not very motivating to study, follow nutritious plan and consume food that is complete in all nutrients, as often we are confused by what we come across in different forums, differing opinions on what is good and what is bad. Herewith in this place, an attempt is made to consolidate information on Nutrition, received through different sources and verify the evidence as much as possible and publish here, in a way easily tounderstand and follow. 
-                        <br>
-                        <b>Target Audience:</b><br> While the initial objective is to make this website as part of academic project, but the information is consolidated in such away to provide all the useful information to  
-                        -	Millennials in understanding the concepts of Nutrition bring awareness, make them conscious of what they eat. 
-                        -	Individuals, who have a specific objective of weight loss, weight gain, and but not sure where to start. 
-                        
-                    </p>
+                    <div class="infoCard">
+                        <div class="infoCardContent">
+                            Intro about Website
+                        </div>
+                        <div class="infoCardImg"></div>
+                    </div>
+                    <div class="infoCard">
+                        <div class="infoCardContent">
+                            Intro about Why Awareness<br>
+                            Link to the page
+                        </div>
+                        <div class="infoCardImg"></div>
+                    </div>
+                    <div class="infoCard">
+                        <div class="infoCardContent">
+                            Intro about Nutrition Simplified<br>
+                            Link to the page
+                        </div>
+                        <div class="infoCardImg"></div>
+                    </div>
                 </div>
             </div>
         </div>
