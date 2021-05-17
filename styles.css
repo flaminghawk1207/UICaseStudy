@@ -22,7 +22,7 @@
     font-size: 30px;
     font-family: helvatica;
     text-align: center;
-    top: 12%;
+    top: 25%;
     left: 13%;
     color: var(--secondary-color);
     padding-left: 20px;
@@ -39,6 +39,8 @@
     background-color:var(--accent-secondary-color);
     width: 100%;
     height:350px;
+    margin: 1px;
+    margin-bottom: 5px;
     
 }
 .Himage
@@ -47,6 +49,7 @@
     background-image: url(img/awarenesshealth.jpg);
     background-size: cover;
     background-position: center;
+    margin-right: 5px;
 }
 .Htext 
 {
@@ -56,7 +59,7 @@
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 20px;
+    padding-top: 5px;
     color: var(--secondary-color);
     
 }
@@ -76,6 +79,7 @@
     background-color:var(--primary-color);
     width: 100%;
     height:350px;
+    margin-bottom: 5px;
     
 }
 .Nimage
@@ -103,4 +107,102 @@
     font-family: helvatica;
     padding-left: 300px;   
     color: var(--accent-secondary-color); 
+}
+
+.Diet
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;   
+    background-color:var(--accent-secondary-color);
+    width: 100%;
+    height:350px;
+    margin-bottom: 5px;
+}
+.Dimage
+{
+    flex: 30%;
+    background-image: url(img/awarenessdiet.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.Dtext 
+{
+    flex: 70%;
+    font-size: 30px;
+    font-family: helvatica;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    color: var(--secondary-color);
+    
+}
+#DietHeading
+{
+    font-size: 70px;
+    font-family: helvatica;
+    padding-left: 300px;   
+    color: var(--primary-color); 
+}
+.Awareness
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;   
+    background-color:var(--primary-color);
+    width: 100%;
+    height:1360px;  
+
+}
+.Whyimg
+{
+    right: 0px;
+    top: 0px;
+    text-align: right;
+    position: absolute;
+    z-index: 1;
+}
+.AwarenessText
+{
+    font-size: 30px;
+    font-family: helvatica;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    color: var(--accent-primary-color);
+}
+#WhyHeading
+{
+    font-size: 69px;
+    font-family: helvatica;   
+    color: var(--accent-secondary-color); 
+}
+.Challenges
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;   
+    background-color:var(--accent-secondary-color);
+    width: 100%;
+    height:550px;
+}
+.ChallengesText
+{
+    font-size: 30px;
+    font-family: helvatica;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    color: var(--secondary-color);
+}
+#ChallengesHeading
+{
+    font-size: 70px;
+    font-family: helvatica;
+    padding-left: 250px;   
+    color: var(--accent-primary-color); 
 }
