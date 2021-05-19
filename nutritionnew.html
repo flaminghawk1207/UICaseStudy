@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>nutritionsimplified</title>
+  <style>
+    .background-container {
+      position: relative;
+    }
+    .text-box {
+      position: absolute;
+      font-size: 30px;
+      font-family: helvatica;
+      top: 30%;
+      left: 35%;
+      color: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      border-style: solid;
+      border-width: 4px;
+    }
+
+    .backimg {
+      filter: brightness(75%);
+      width: 100%;
+    }
+
+    body {
+      margin: 0px;
+      border: 0px;
+      padding: 0px;
+    }
+
+    .second-container {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      padding-top:100px;
+background-color:#f76c6c;
+      position:relative;
+      padding-bottom:500px;
+
+    }
+
+    .stuff {
+position:absolute;
+      font-size:20px;
+      font-family:helvatica;
+      color: black;
+      right:70px;
+      line-height:2;
+      top:20px;
+      border-radius:10px;
+      border-style: solid;
+      width:600px;
+      border-width: 4px;
+      border-color: black;
+    }
+    .eat{
+      position:absolute;
+      height:300px;
+      left:20px;
+      top:20px;
+    }
+    .wordsfood{
+      position:absolute;
+      width:350px;
+      height:300px;
+      right:20px;
+      bottom:20px;
+
+    }
+    .stuffsti {
+position:absolute;
+      font-size:20px;
+      font-family:helvatica;
+      color: black;
+      left:50px;
+      bottom:0px;
+      line-height:1.2;
+      border-radius:10px;
+      border-style: solid;
+      margin-left: 10px;
+      border-width:4px;
+      border-color: black;
+      width:500px;
+
+
+    }
+    .third-container{
+      position:relative;
+      background-color:#A8D0E6;
+      height:600px;
+    }
+    .classification{
+      font-family:sans-serif;
+      position:absolute;
+      font-size: 50px;
+      left:300px;
+      top:100px;
+      font-weight: bolder;
+    }
+
+
+    .button{
+      font-size:50px;
+      border-radius:12px;
+      background-color:white;
+      color:#24305E;
+      border: 2px solid #24305E;
+    }
+    .btn1{
+      width:400px;
+ height:75px;
+      top:300px;
+      display:inline-block;
+      position:absolute;
+      left:10px;
+    }
+    .btn2{
+      width:400px;
+ height:75px;
+        top:300px;
+        display:inline-block;
+      position:absolute;
+      left:425px;
+    }
+    .btn3{
+      width:400px;
+ height:75px;
+        top:300px;
+        display:inline-block;
+      position:absolute;
+      right:10px;
+    }
+    .btn4{
+      width:400px;
+ height:75px;
+      top:450px;
+      display:inline-block;
+      position:absolute;
+      left:10px;
+    }
+    .btn5{
+      width:400px;
+ height:75px;
+        top:450px;
+        display:inline-block;
+      position:absolute;
+      left:425px;
+    }
+    .btn6{
+      width:400px;
+ height:75px;
+        top:450px;
+        display:inline-block;
+      position:absolute;
+      right:10px;
+    }
+    .fourth-container{
+      position:relative;
+      height:900px;
+
+    }
+    .calories{
+      position:absolute;
+      border-radius: 10px;
+      height:300px;
+      width:400px;
+      left:50px;
+      border-width: 4px;
+      border-style: solid;
+      font-size:x-large;
+      font-style: helvatica;
+
+
+    }
+    .canned{
+      position:absolute;
+      border-radius: 10px;
+      height:450px;
+      width:500px;
+      right:50px;
+      border-width: 4px;
+      border-style: solid;
+      bottom:60px;
+      font-style: helvatica;
+      font-size: x-large;
+
+    }
+    .fifth-container{
+      position:relative;
+      height:600px;
+      width:100%;
+      background-color:#f76c6c;
+    }
+    .sixth-container{
+      position:relative;
+      height:900px;
+      background-color:#A8D0E6;
+
+    }
+    .micro{
+      position:absolute;
+      right:100px;
+      top:200px;
+      width:400px;
+    }
+    .macro{
+      position:absolute;
+      left:100px;
+      top:200px;
+      width:400px;
+
+
+    }
+
+
+    .macs{
+      text-align: center;
+      font-size:50px;
+      font-family:sans-serif;
+      font-weight: bolder;
+      margin:0px;
+    }
+    .mics{
+      position:absolute;
+      border-width: 4px;
+      text-align: center;
+      border-style: solid;
+      bottom:10px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-style: italic;
+
+    }
+    .bmi{
+      position: absolute;
+      left:30px;
+      border-width:4px;
+      border-radius: 10px;
+      border-style: solid;
+      top:50px;
+      width:400px;
+      font-size: 20px;
+      font-style: helvatica;
+      line-height: 1.2;
+
+
+    }
+    .heads{
+      font-weight: bolder;
+      font-size: 20px;
+    }
+    .waist{
+      position:absolute;
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 4px;
+      bottom:5px;
+      right:40px;
+      width:350px;
+      font-style: helvatica;
+      font-size: 25px;
+    }
+    .seventh-container{
+      position:relative;
+      height:600px;
+    }
+    .boys{
+      position:absolute;
+      left:100px;
+      font-size: 30px;
+    }
+    .girls{
+      position: absolute;
+      right:150px;
+      font-size: 30px;
+    }
+    .boyimg{
+      position:absolute;
+      top:300px;
+      left:50px;
+    }
+    .girlimg{
+      position:absolute;
+      top:300px;
+      right:50px;
+    }
+.calo{
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+.calo2{
+  position:absolute;
+  top:150px;
+  right:100px;
+}
+.can{
+  position:absolute;
+  bottom:100px;
+  left:40px;
+  height:300px;
+  width:400px;
+}
+.can2{
+  position:absolute;
+  bottom:300px;
+  left:300px;
+  height:200px;
+  width:300px;
+}
+.bims{
+  position:absolute;
+  top:50px;
+  right:40px;
+  height:400px;
+  width:600px;
+}
+.waisr{
+  position:absolute;
+  bottom:40px;
+  left:50px;
+  height:330px;
+}
+.nutty{
+  position:absolute;
+  bottom:100px;
+  right:380px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="background-container">
+    <img src="nut1.jpeg" alt="nut" class="backimg">
+    <div class="text-box">
+      <h1>NUTRITION<br />
+        SIMPLIFIED</h1>
+    </div>
+  </div>
+  <div class="second-container">
+    <img src="nut2.jpg" alt="corn" class="eat">
+    <br><br><br>
+    <p class="stuff">
+      We always heard about having complete food for health and nourishment.<br />
+      Herewith, is a summary to understand main constituents of food.<br />
+      A nutrient is a substance used by an organism to survive, grow, and reproduce.<br>
+      Nutrients are compounds in foods essential to life and health, providing us with energy,<br /> the building blocks for repair and growth and substances necessary to regulate chemical processes.
+    </p>
+    <br><br><br>
+    <img src="right.jpg" alt="foodword" class="wordsfood">
+    <img src="nutty1.jpg" alt="nutty" class="nutty">
+    <p class="stuffsti">
+      Another term we come across in this journey is ‘Essential Nutrients’.
+Essential Nutrients are nutrients that are required for normal physiological (body function) and cannot be created by body, and these are required for survival. So, these need to be part of the dietary intake.
+Following are essential nutrients for humans.<br>
+  •	9 Amino Acids (Protein)<br>
+•	2 Fatty Acids (FAT)<br>
+•	13 Vitamins <br>
+•	16 Minerals <br>
+•	Water <br>
+
+While these essential, but can turn out to be toxic if consumed beyond the recommended quantities.
+
+      </p>
+  </div>
+  <div class="third-container">
+    <h1 class="classification">Classification Of Nutrients:</h1>
+
+
+    <button class="button btn1">Carbohydrates</button>
+
+
+    <button class="button btn2">Protiens</button>
+
+    <button class="button btn3">Fats&nbsp&nbsp</button>
+
+    <br>
+    <br />
+    <br><br>
+
+    <button class="button btn4"> &nbsp&nbsp&nbsp&nbspVitamins&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+    <button class="button btn5">Minerals</button>
+    <button class="button btn6">Water</button>
+
+  </div>
+  <div class="fourth-container">
+    <p class="calories">
+      <strong>Calorie:</strong><br />
+      The food we take is finally converted into energy. Calorie is amount of energy (heat) it
+      takes to raise temperature of 1 gm of water by 1 degree Celsius.
+      We need to understand the calories a food item generates, to decide the quantity to
+      be consumed.
+    </p>
+    <img src="calo.jpg" alt="calo" class="calo">
+    <img src="calo2.jpg" alt="calo2" class="calo2">
+    <p class="canned">
+      <strong>Understanding nutrients on packaged food:</strong><br />
+We see RNI/RDI/GDA as labelled on the packaged food along with the micro/macro nutrients.<br />
+•	RNI: Recommended Nutrient Intake<br />
+•	RDI: Recommended Daily Allowance<br />
+•	GDA: Gross Daily Allowance<br />
+Though these are used by different products/brands but mean the same. This is to tell - by consuming one serving of the packet (or as mentioned in the package), how much of recommended daily intake is fulfilled.
+The quantities are mentioned in terms of units - gm (grams), mg (milligram) or mcg/micro symbol (micro grams).
+
+    </p>
+    <img src="canned.jpg" alt="canned" class="can">
+    <img src="canned2.jpg" alt="canned2" class="can2">
+  </div>
+  <div class="fifth-container">
+    <br><br><br>
+    <p class="macs">Micro And Macro Nutrients</p>
+    <br><br>
+    <img src="macro.jpg" alt="macro" class="macro">
+    <img src="micro.jpg" alt="micro" class="micro">
+    <p class="mics">
+      macro-nutrients are required in large quantities while  micro-nutrients are required in small quantities <br>
+      To start the journey of healthy living, we should ensure that above nutrients are in the
+required quantities for the age and lifestyle in the food we consume.
+    </p>
+  </div>
+  <div class="sixth-container">
+    <br><br><br><br>
+    <div class="bmi">
+      <p class="heads">
+        Body Mass Index(BMI):
+      </p>
+      <br />
+      <br />
+      <p>
+      Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters. A high BMI can be an indicator of high body fatness. BMI can be used to screen for weight categories that may lead to health problems but it is not diagnostic of the body fatness or health of an individual.
+      </p>
+    </div>
+    <img src="bmi.jpg" alt="bmi" class="bims">
+    <p class="waist"><strong>Waist circumference:</strong><br><br><br>
+Measuring waist circumference helps to screen possible health risks that come with
+overweight and obesity. This risk goes up with a waist size that is greater than 35 inches
+for women or greater than 40 inches for men. <br>
+<a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_dis.htm
+">click here for more info </a></p>
+<img src="waisr.jpg" alt="waisr" class="waisr">
+  </div>
+  <div class="seventh-container">
+    <p class="macs">Growth Charts</p>
+    <br><br><br>
+    <p class="boys">Growth Charts-Boys:</p>
+    <p class="girls">Growth Charts-Girls:</p>
+    <img src="boychart.jpg" alt="chart1" class="boyimg">
+    <img src="girlchart.jpg" alt="chart2" class="girlimg">
+
+  </div>
+</body>
+
+</html>
